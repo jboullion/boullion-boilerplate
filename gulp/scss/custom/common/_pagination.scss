@@ -1,0 +1,29 @@
+//WP PAGENAVI
+.wp-pagenavi,
+.pagination					{
+	.pages						{ display: none; }
+	span.current			{ @extend .border-indent; }
+	a, span						{
+		@extend .border-popout;
+		color: #fff !important;
+		padding: 10px 15px;
+		margin-right: 8px;
+		text-decoration: none;
+		display: inline-block;
+		line-height: 1;
+		transition: transform linear 0.2s;
+
+		&:visited 					{ color: #fff; }
+
+		&:hover,
+		&:focus             {
+			@extend .border-popout;
+			text-decoration: none;
+		 	@include scale(1.2); }
+		&:active            {
+			@extend .border-indent;
+			text-decoration: none; }
+
+	}
+
+}

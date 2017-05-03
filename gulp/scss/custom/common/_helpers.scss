@@ -1,0 +1,60 @@
+//https://maximilianhoffmann.com/posts/better-font-rendering-on-osx
+//light on dark aliasing
+.txt-antialiased			{ -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-smoothing: antialiased; }
+
+//YOU TUBE VIDEO WRAPPER
+.videoWrapper					{ position: relative; padding-bottom: 56.25%; /* 16:9 */ padding-top: 25px; height: 0; margin-bottom: 30px;
+	iframe							{ position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+}
+
+//SITE WIDE MEDIA QUERIES
+//Tiny Phones (480px) and below
+@media(max-width: $screen-tiny-max) {
+	.tiny-only				{ display: block; }
+}
+
+// Tiny Phones (480px) and above
+@media (min-width: $screen-xs-min) {
+	.tiny-only				{ display: none; }
+}
+
+//Tablet and Smaller screens (789px) and below
+@media(max-width: $screen-xs-max) {
+	div.row					{ margin: 0px; }
+	.medium-show			{ display: none; }
+
+}
+
+// Tablet and Larger (789px) and above
+@media (min-width: $screen-sm-min) {
+
+}
+
+.medium-only				{ display: none; }
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+	.medium-only			{ display: block; }
+}
+
+// Desktop (991px) and below
+@media (max-width: $screen-sm-max) {
+	.mobile-hide			{ display: none; }
+	.alignright,
+	.alignleft				{ margin: 0px; margin-bottom: 10px; float: none; display: block; }
+}
+
+// Desktop (992px) and above
+@media (min-width: $screen-md-min) {
+	.desktop-hide			{ display: none; }
+
+}
+
+@media (max-width: $screen-md-max) {
+	.fullscreen-only		{ display: none !important; }
+	.fullscreen-hide		{ display: block; }
+}
+
+// Fullscreen (1200px) and above
+@media (min-width: $screen-lg-min) {
+	.fullscreen-only		{ display: block; }
+	.fullscreen-hide		{ display: none; }
+}

@@ -1,0 +1,35 @@
+// dimensions
+$mobile-navbar-width:256px;
+$screen-tn-max: 480px;
+
+$screen-tiny-max: ($screen-xs-min - 1);
+
+//folder locations
+$img-path: '../img/';
+
+//colors
+$primary-color: #8a0600;
+$secondary-color: lighten( $primary-color, 10% );
+
+//grays
+$light-gray: #f1f1f1;
+$e7-gray: #e7e7e7;
+$upgraydd: #dddddd;
+$dark-gray: #444444;
+$degrees-of-gray: #666666;
+$gray-problems: #999999;
+$almost-black: #231f20;
+$graaaaaay: #aaaaaa;
+$gracccie: #cccccc;
+
+
+//fonts
+$root-font-size: 10px;
+
+$default-text: $almost-black;
+
+$anchor-color: $primary-color;
+$anchor-hover: lighten( $anchor-color, 10% );
+
+$body-font: Arial, sans-serif;
+$header-font: Arial, sans-serif;

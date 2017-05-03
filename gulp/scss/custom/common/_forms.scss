@@ -1,0 +1,104 @@
+/**
+ * Custon Forms
+ * 
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner		{ border: 0; outline: 0 !important; }
+
+//hide the default IE crap on selects and inputs
+input[type=text]::-ms-clear { display: none; }
+select::-ms-expand 			{ display: none; }
+
+textarea.no-resize			{ resize: none; }
+label input[type="checkbox"]{ margin-right: 10px; }
+
+.setup-label				{ font-family: $header-font; font-size: 1em; font-weight: bold; display: inline-block; line-height: 1.4; text-transform: uppercase; }
+
+label						{ @extend .setup-label; }
+label.inline-block			{ display: inline-block; vertical-align: middle; }
+
+/* Apply to a checkbox to use FontAwesome icons */
+input.awesomebox			{ display: none;
+
+	+ label					{ @extend .fa; @extend .setup-label; @include user-select(none); padding-left: 26px;  
+		&:before			{ content: "\f096"; font-family: FontAwesome; font-weight: normal; position: absolute; left: 0px; }
+	}
+
+	&:checked + label:before { content: "\f046"; margin-right: 6.5px;}
+}
+
+.form-control				{ font-size: 16px; max-width: 450px; 
+	&.error					{ border: 1px solid #FF0000; }
+}
+
+.form-group.inline-group	{
+	.radio-inline, 
+	.checkbox-inline		{ 
+		@media (min-width: $screen-md-min) { margin-right: 10px; }
+		@media (max-width: $screen-sm-max) { display: block; margin: 10px; }
+	}
+
+}
+
+input						{ border-radius: 0; font-family: $body-font; } /* fix for ipads */
+input.inline-block			{ display: inline-block; vertical-align: middle; }
+
+input.form-control			{ border-radius: 4px; height: 46px; }
+
+textarea.form-control		{ padding: 12px 15px; }
+
+input.form-control:focus,
+textarea.form-control:focus,
+select.m59-style:focus 		{ @include box-shadow(0 0 8px rgba($primary-color, 0.6)); border: 1px solid $primary-color; outline: 0; }
+
+select.m59-style				{ 
+	border-radius: 4px; cursor: pointer; display: inline-block; height: 50px; border: 1px solid $gracccie;
+
+	padding: 6px 40px 6px 16px;
+	font-size: 16px;
+	font-weight: bold;
+	outline:none;
+	color: $default-text;
+
+	background-color: #FFF;
+	background-image: url($img-path + "red-arrow.png");
+	background-repeat: no-repeat;
+	background-position: right 20px top 20px, right 0px top 0px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+
+	width: 100%;
+	max-width: 450px;
+
+	&.rounded				{ border-radius: 30px; }
+
+	&.inline-block			{ display: inline-block; width: 80%; }
+
+	&.error					{ border: 1px solid #FF0000; }
+
+	option					{ padding: 4px 15px; 
+		&:disabled			{ display: none; }
+	}
+
+	&.white 				{
+		border: 1px solid #FFF;
+		background-color: #000;
+		background-image: url($img-path + "white-arrow.png");
+		color: #FFF;
+	}
+}
+
+input[type="radio"]			{ box-shadow: none !important; 
+	&.error					{ background-color: red; }
+}
+
+div.radio,
+div.checkbox				{ margin-bottom: 15px; }
+/* Placeholders */
+/*
+::-webkit-input-placeholder { color: #918f8f; font-family: $header-font; font-size: 16px; text-transform: uppercase; opacity: 1; }
+:-moz-placeholder           { color: #918f8f; font-family: $header-font; font-size: 16px; text-transform: uppercase; opacity: 1; }
+::-moz-placeholder          { color: #918f8f; font-family: $header-font; font-size: 16px; text-transform: uppercase; opacity: 1; }
+:-ms-input-placeholder      { color: #918f8f; font-family: $header-font; font-size: 16px; text-transform: uppercase; opacity: 1; }
+*/

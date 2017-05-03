@@ -1,0 +1,17 @@
+/**
+ * LITY MODAL
+ */
+.lity-modal				{ background-color: #FFFFFF; width: 600px; max-width: 100%;
+
+	@media(min-width: $screen-sm-min)    { padding: 50px; }
+	@media(max-width: $screen-xs-max)    { padding: 30px; }
+
+}
+
+.lity-inline			{
+	.lity-container		{
+		.lity-close		{ color: $primary-color; font-size: 34px !important; font-weight: bold; text-shadow: none; right: 10px; top: 10px; position: absolute;
+			//i           { pointer-events: none;  }
+		}
+	}
+}

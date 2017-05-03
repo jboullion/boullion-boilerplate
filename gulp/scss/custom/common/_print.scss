@@ -1,0 +1,15 @@
+// printing
+.print-only            { display: none; }
+@media print           {
+  .no-print            { display: none !important; } //hidden when printing
+  .print-only          { display: block !important; } //only seen when printing
+  .print-full          { width: 100% !important;  } //used to expand content. Useful if hidding side menus for printing
+  a[href]:after,
+  a:link:after,
+  a:visited:after      { content: ""; }
+}
+
+/* FireFox */
+@-moz-document url-prefix() {
+	@media print {}
+}
