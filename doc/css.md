@@ -58,47 +58,6 @@ project requires.
 
 Along with the base styles, we also provide some commonly used helper classes.
 
-#### `.hidden`
-
-The `hidden` class can be added to any element that you want to hide visually
-and from screen readers. It could be an element that will be populated and
-displayed later, or an element you will hide with JavaScript.
-
-#### `.visuallyhidden`
-
-The `visuallyhidden` class can be added to any element that you want to hide
-visually, while still have its content accessible to screen readers.
-
-See also:
-
-* [CSS in Action: Invisible Content Just for Screen Reader
-  Users](http://www.webaim.org/techniques/css/invisiblecontent/)
-* [Hiding content for
-  accessibility](http://snook.ca/archives/html_and_css/hiding-content-for-accessibility)
-* [HTML5 Boilerplate - Issue #194](https://github.com/h5bp/html5-boilerplate/issues/194/).
-
-#### `.invisible`
-
-The `invisible` class can be added to any element that you want to hide
-visually and from screen readers, but without affecting the layout.
-
-As opposed to the `hidden` class that effectively removes the element from the
-layout, the `invisible` class will simply make the element invisible while
-keeping it in the flow and not affecting the positioning of the surrounding
-content.
-
-__N.B.__ Try to stay away from, and don't use the classes specified above for
-[keyword stuffing](https://en.wikipedia.org/wiki/Keyword_stuffing) as you will
-harm your site's ranking!
-
-#### `.clearfix`
-
-The `clearfix` class can be added to any element to ensure that it always fully
-contains its floated children.
-
-Over the years there have been many variants of the clearfix hack, but currently,
-we use the [micro clearfix](http://nicolasgallagher.com/micro-clearfix-hack/).
-
 
 ## Media Queries
 
