@@ -2,31 +2,25 @@
  * 3rd Party Libraries
  */
 
-@import "./bootstrapv3";
-@import "./fontawesome/font-awesome";
+/* There are multiple ways to include bootstrap 4. This is the full include. There are also more simple includes and a flex include */ 
 
+@import "./fontawesome5/fontawesome";
 
 /**
- * Common Files. Mostly just variable changes here
+ * Global styles that are probably enabled on most sites
  */
-@import "./custom/common/variables";
-@import "./custom/common/mixin";
-@import "./custom/common/helpers";
-@import "./custom/common/print";
-@import "./custom/common/buttons";
-@import "./custom/common/typography";
+@import "./boilerplate/global/variables";
+@import "./boilerplate/global/mixin";
+@import "./boilerplate/global/helpers";
+@import "./boilerplate/global/print";
+@import "./boilerplate/global/typography";
+@import "./boilerplate/global/buttons";
+@import "./boilerplate/global/forms";
 
-/*
-@import "./custom/common/forms";
-@import "./custom/common/tables";
-@import "./custom/common/carousel";
-@import "./custom/common/slick-slider";
-@import "./custom/common/modals";
-*/
 
 /**
  * Site Specific. Will be very different between projects
  */
-@import "./custom/site/sitewide";
-@import "./custom/site/navigation";
-@import "./custom/site/pages";
+@import "./boilerplate/site/sitewide";
+@import "./boilerplate/site/navigation";
+@import "./boilerplate/site/pages";

@@ -1,0 +1,79 @@
+@mixin user-select($select) {
+	-webkit-user-select: $select;
+	-moz-user-select: $select;
+	-ms-user-select: $select; // IE10+
+	user-select: $select;
+}
+
+/*
+*  Used to horizontally and vertically center an element. 
+*  
+*  Usage: @include center <- no arguments to use transforms to center elements.
+*         @include center(w,h) <- if size is known.
+*
+*/
+
+@mixin center($width: null, $height: null) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  @if not $width and not $height {
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  } @else if $width and $height {
+    width: $width;
+    height: $height;
+    margin: -($width / 2) #{0 0} -($height / 2);
+  } @else if not $height {
+    width: $width;
+    margin-left: -($width / 2);
+    transform: translateY(-50%);
+  } @else {
+    height: $height;
+    margin-top: -($height / 2);
+    transform: translateX(-50%);
+  }
+}
+
+/*
+*  Used to place an transparent layer over an element, usually an image. (Note: must be wrapped in position: relative;). Utilizes the rgba() function.
+*  
+*  Usage: @include overlay(color value, decimal) 
+*  color: Can be word or hex value 
+*  opacity : Must be between 0 and 1 inclusive
+*
+*/
+
+@mixin overlay( $bg-color : #000, $opacity : 0.5 ){ 
+    background-color: rgba($bg-color, $opacity);
+    height: 100%; 
+    left: 0px; 
+    position: absolute; 
+    top: 0px; 
+    width: 100%;  
+    z-index: 2; 
+}
+
+ @mixin rotate($degrees) {
+  -webkit-transform: rotate($degrees);
+  -ms-transform: rotate($degrees); // IE9 only
+  -o-transform: rotate($degrees);
+  transform: rotate($degrees);
+}
+
+/*
+*
+*  Want to use rem, but don't want to do the math? Well, here you go.
+*  Pass the pixel value in font-size() and calculateRem() will return the rem value with a px fallback (Thanks IE)
+*
+*  Note: $root-font-size is set in _pk-variables.scss, so make sure that is the size you want (20px is the WP-gulp root default)
+*
+*  Usage: @include font-size(16px)
+*
+*/
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
